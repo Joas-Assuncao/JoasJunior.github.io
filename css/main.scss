@@ -1,0 +1,1873 @@
+/* Olá avaliadores!
+Gostaria de dizer que fiquei muito feliz e estou confiante com o processo.
+Estou bem feliz com meu resultado e tentei por o máximo de aprendizado que tenho nesse projeto.
+Gostei MUITO da filosofia de vocês, espero fazer parte da equipe!
+Obrigado desde já!
+*/
+
+$black: #000;
+$white: #FFF;
+
+* {
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Inter', sans-serif;
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    background: transparent;
+
+    border: none;
+
+    cursor: pointer;
+
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+
+        height: 100vh;
+        width: 100vw;
+
+        #container-image {
+            height: 100vh;
+            width: 100vw;
+
+            display: flex;
+            justify-content: flex-end;
+
+            img {
+                height: 100vh;
+                width: 50vw;
+                object-fit: cover;
+            }
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 3.2rem;
+
+            width: 100vw;
+
+            position: absolute;
+
+            button {
+                background: transparent;
+            
+                border: none;
+            
+                outline: none;
+
+                cursor: pointer;
+            }
+
+            .home {
+                @extend .display;
+
+                p {
+                    font-size: 1.4rem;
+                    text-align: center;
+                }
+
+                img {
+                    margin-right: 1.1rem;
+                    width: 1.9rem;
+                }
+
+                #second-image {
+                    display: none;
+                }
+            }
+
+            .right {
+                @extend .display;
+
+                .mode {
+                    margin-right: 1.6rem;
+                    margin-top: .3rem;
+
+                    img {
+                        width: 1.6rem;
+                    }
+                }
+
+                .menu {
+
+                    p {
+                        height: .1rem;
+                        width: 2rem;
+
+                        background: $black;
+                    }
+
+                    p:not(:last-of-type) {
+                        margin-bottom: .64rem;
+                    }
+                }
+            }
+        }
+
+        .little-title {
+            padding: 3.2rem;
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            position: absolute;
+
+            p {
+                font-size: 1.4rem;
+                height: 10rem;
+                float: left;
+                
+                text-align: center;
+                text-transform: uppercase;
+                
+                transform: rotate(-90deg);
+            }
+        }
+
+        .title {
+            height: 100vh;
+            width: 100vw;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: absolute;
+
+            h1 {
+                font-size: 6.4rem;
+                line-height: 7.8rem;
+                text-align: center;
+                text-transform: uppercase;
+                
+            }
+        }
+    }
+
+    .main {
+        margin-top: 10rem;
+        margin-bottom: 10rem;
+    
+        width: 100vw;
+    
+        .container-description {
+            display: flex;
+            align-items: center;
+            padding: 0 8rem 0 8rem;
+    
+            .datas {
+                display: flex;
+                justify-content: space-between;
+    
+                .props {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+    
+                    label {
+                        font-size: 1.4rem;
+                        line-height: 1.8rem;
+    
+                        opacity: 40%;
+                    }
+                    label:not(:first-of-type) {
+                        margin-top: .7rem;
+                    }
+                }
+    
+                .values {
+                    margin-left: 2rem;
+    
+                    p {
+                        font-size: 1.4rem;
+                        line-height: 1.8rem;
+    
+                        width: 25.6rem;
+                    }
+                    p:not(:first-of-type) {
+                        margin-top: .7rem;
+                    }
+                }
+            }
+    
+            .description {
+                display: flex;
+                justify-content: start;
+    
+                height: 10rem;
+                width: 50rem;
+    
+                padding-left: 5rem; 
+    
+                p {
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+                }
+            }
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+    
+            .container-content {
+                .first-image {
+                    margin-top: 10rem;
+    
+                    img {
+                        max-width: 65rem;
+    
+                        border-radius: 2rem;
+                    }
+                }
+    
+                .second-image {
+                    margin-top: 5rem;
+    
+                    img {
+                        height: 25rem;
+                        width: 25rem;
+    
+                        border-radius: 2rem;
+                    }
+                }
+    
+                .third-image {
+                    margin-top: -12.5rem;
+                    
+                    float: right;
+    
+                    img {
+                        height: 40rem;
+                        width: 30rem;
+    
+                        border-radius: 2rem;
+    
+                        object-fit: cover;
+                    }
+                }
+    
+                .first-text {
+                    margin-top: 10rem;
+                    margin-left: -10rem;
+    
+                    width: 35rem;
+                    
+                    p {
+                        font-weight: 500;
+                        font-size: 2.4rem;
+                        line-height: 3.2rem;
+                    }
+                }
+    
+                .fourth-image {
+                    margin-top: 10rem;
+                    
+                    img {
+                        height: 65rem;
+                        width: 65rem;
+    
+                        border-radius: 2rem;
+    
+                        object-fit: cover;
+                    }
+                }
+    
+                .second-text {
+                    margin-top: 10rem;
+                    margin-bottom: 10rem;
+                    margin-right: -15rem;
+    
+                    float: right;
+                    
+                    p {
+                        font-weight: 500;
+                        font-size: 2.4rem;
+                        line-height: 3.2rem;
+                    }
+                }
+                .fifth-image {
+    
+                    img {
+                        height: 65rem;
+                        width: 65rem;
+    
+                        border-radius: 2rem;
+    
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .container-buttons {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                height: 100vh;
+                width: 80vw;
+        
+                .button-left {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+        
+                    height: 22rem;
+                    width: 22rem;
+        
+                    border-radius: 50%;
+        
+                    background: $black;
+    
+                    transition: .5s;
+        
+                    button {
+                        @extend .button;
+    
+                        background: transparent;
+                        
+                        border: none;
+                        outline: none;
+    
+                        transition: .5s;
+        
+                        img {
+                            height: 3rem;
+                            margin-bottom: 1.5rem;
+                        }
+                        p {
+                            font-weight: 500;
+                            font-size: 2.4rem;
+                            line-height: 3.2rem;
+        
+                            color: $white;
+                        }
+                    }
+                    
+                }
+                .button-right {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+        
+                    height: 22rem;
+                    width: 22rem;
+        
+                    border-radius: 50%;
+        
+                    background: $black;
+    
+                    transition: .5s;
+        
+                    button {
+                        @extend .button;
+    
+                        background: transparent;
+        
+                        border: none;
+                        outline: none;
+        
+                        img {
+                            margin-bottom: 1.5rem;
+                            height: 3rem;
+                        }
+                        p {
+                            font-weight: 500;
+                            font-size: 2.4rem;
+                            line-height: 3.2rem;
+        
+                            color: $white;
+                        }
+                    }
+                }
+    
+                .button-left:hover, .button-right:hover {
+                    opacity: 85%;
+                }
+            }
+        }
+        
+    }
+
+    footer { 
+        padding: 0 5rem 5rem 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .links {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            width: 70%;
+        }
+
+        .vangogh a, .links a {
+            color: $black;
+
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+
+            text-transform: uppercase;
+            text-decoration: none;
+
+            img {
+                height: 1rem;
+
+                margin-left: .3rem;
+            }
+        }
+
+        .links a:last-of-type img {
+            height: 3rem;
+        }
+        
+    }
+}
+
+
+/* GUIDE.HTML */
+
+#buttons-guide {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 100vh;
+    width: 100vw;
+
+    .button-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 25rem;
+        width: 25rem;
+
+        border-radius: 50%;
+
+        background: $black;
+
+        button {
+            @extend .button;
+
+            background: transparent;
+            
+            border: none;
+            outline: none;
+
+            img {
+                height: 3rem;
+                margin-bottom: 1.5rem;
+            }
+            p {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 32px;
+
+                color: $white;
+            }
+        }
+    }
+    .button-right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 25rem;
+        width: 25rem;
+
+        border-radius: 50%;
+
+        background: url('/images/The_Night.jpg');
+        background-size: cover;
+        
+
+        button {
+            @extend .button;
+
+            background: transparent;
+
+            border: none;
+            outline: none;
+
+            img {
+                margin-bottom: 1.5rem;
+                height: 3rem;
+            }
+            p {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 32px;
+
+                color: $white;
+            }
+        }
+    }
+
+    .button-left:hover, .button-right:hover {
+        opacity: 95%;
+    }
+}
+
+/* MEDIAS QUERIES */
+
+@media (max-width: 1070px) {
+    body {
+
+        .hero {
+            .little-title {
+                p {
+                    font-size: 1.3rem;
+                    margin-left: 1rem;
+                }
+            }
+            .title {
+                h1 {
+                    font-size: 5.6rem;
+                    line-height: 7.2rem;
+                }
+            }
+        }
+
+        .main {
+
+            .container-description {
+                .datas {
+                    .props {
+                        label {
+                            font-size: 1.3rem;
+                            line-height: 1.7rem;
+                        }
+                    }
+    
+                    .values {
+    
+                        p {
+                            font-size: 1.3rem;
+                            line-height: 1.7rem;
+                        }
+                    }
+                }
+    
+                .description {
+    
+                    p {
+                        font-size: 1.3rem;
+                        line-height: 1.8rem;
+                    }
+                }
+            }
+
+            .content {
+                .container-content {
+                    .first-image {
+                        img {
+                            max-width: 60rem;
+                        }
+                    }
+        
+                    .second-image {
+        
+                        img {
+                            height: 22.5rem;
+                            width: 22.5rem;
+
+                            object-fit: cover;
+                        }
+                    }
+        
+                    .third-image {
+                        margin-top: -11.25rem;
+
+                        img {
+                            height: 40rem;
+                            width: 25rem;
+                        }
+                    }
+
+                    .first-text {
+                        margin-top: 8rem;
+                        margin-left: -8rem;
+        
+                        width: 30rem;
+                        
+                        p {
+                            font-size: 2rem;
+                            line-height: 2.8rem;
+                        }
+                    }
+        
+                    .fourth-image {
+                        margin-top: 8rem;
+                        
+                        img {
+                            height: 60rem;
+                            width: 60rem;
+                        }
+                    }
+        
+                    .second-text {
+                        margin-top: 8rem;
+                        margin-bottom: 8rem;
+                        margin-right: -10rem;
+                        
+                        p {
+                            font-weight: 500;
+                            font-size: 2rem;
+                            line-height: 2.8rem;
+                        }
+                    }
+                    .fifth-image {
+        
+                        img {
+                            height: 60rem;
+                            width: 60rem;
+                        }
+                    }
+                }
+            
+                .container-buttons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    height: 80vh;
+
+                    padding: 0;
+            
+                    .button-left {
+                        height: 20rem;
+                        width: 20rem;
+    
+                        button {
+                            img {
+                                height: 3rem;
+                                margin-bottom: 1.25rem;
+                            }
+                            p {
+                                font-size: 2rem;
+                                line-height: 2.8rem;
+                            }
+                        }
+                        
+                    }
+                    .button-right {
+                        height: 20rem;
+                        width: 20rem;
+    
+                        button {
+                            img {
+                                height: 3rem;
+                                margin-bottom: 1.25rem;
+                            }
+                            p {
+                                font-size: 2rem;
+                                line-height: 2.8rem;
+                            }
+                        }
+                    }
+        
+                    .button-left:hover, .button-right:hover {
+                        opacity: 85%;
+                    }
+                }
+            }
+        }
+
+        footer { 
+            padding: 0 4rem 4rem 4rem;
+    
+            .vangogh a, .links a {
+                font-size: 1.3rem;
+                line-height: 1.5rem;
+
+                img {
+                    height: 1rem;
+                }
+            }
+    
+            .links a:last-of-type img {
+                height: 2.8rem;
+            }
+            
+        }
+    }
+
+    body {
+        #buttons-guide {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+    
+            .button-left {
+                height: 20rem;
+                width: 20rem;
+
+                button {
+                    img {
+                        height: 3rem;
+                        margin-bottom: 1.25rem;
+                    }
+                    p {
+                        font-size: 2rem;
+                        line-height: 2.8rem;
+                    }
+                }
+                
+            }
+            .button-right {
+                height: 20rem;
+                width: 20rem;
+
+                button {
+                    img {
+                        height: 3rem;
+                        margin-bottom: 1.25rem;
+                    }
+                    p {
+                        font-size: 2rem;
+                        line-height: 2.8rem;
+                    }
+                }
+            }
+        }
+    }
+}    
+
+@media (max-width: 940px) {
+    body {
+
+        .hero {
+            .little-title {
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+            .title {
+                h1 {
+                    font-size: 4.8rem;
+                    line-height: 6.4rem;
+                }
+            }
+        }
+
+        .main {
+
+            .container-description {
+                .datas {
+                    .props {
+                        label {
+                            font-size: 1.3rem;
+                            line-height: 1.7rem;
+                        }
+                    }
+    
+                    .values {
+    
+                        p {
+                            font-size: 1.3rem;
+                            line-height: 1.7rem;
+                        }
+                    }
+                }
+    
+                .description {
+    
+                    p {
+                        font-size: 1.3rem;
+                        line-height: 1.8rem;
+                    }
+                }
+            }
+
+            .content {
+                .container-content {
+                    .first-image {
+                        img {
+                            max-width: 55rem;
+                        }
+                    }
+        
+                    .second-image {
+        
+                        img {
+                            height: 20rem;
+                            width: 20rem;
+                        }
+                    }
+        
+                    .third-image {
+                        margin-top: -10rem;
+
+                        width: 25rem;
+
+                        img {
+                            height: 35rem;
+                            width: 25rem;
+                        }
+                    }
+
+                    .first-text {
+                        margin-top: 7rem;
+                        margin-left: -7rem;
+        
+                        width: 30rem;
+                        
+                        p {
+                            font-size: 1.8rem;
+                            line-height: 2.6rem;
+                        }
+                    }
+        
+                    .fourth-image {
+                        margin-top: 8rem;
+                        
+                        img {
+                            height: 55rem;
+                            width: 55rem;
+                        }
+                    }
+        
+                    .second-text {
+                        margin-top: 7rem;
+                        margin-bottom: 7rem;
+                        margin-right: -8rem;
+                        
+                        p {
+                            font-size: 1.8rem;
+                            line-height: 2.6rem;
+                        }
+                    }
+
+                    .fifth-image {
+        
+                        img {
+                            height: 55rem;
+                            width: 55rem;
+                        }
+                    }
+                }
+            
+                .container-buttons {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    height: 70vh;
+
+                    padding: 0;
+            
+                    .button-left {
+                        height: 18rem;
+                        width: 18rem;
+    
+                        button {
+                            img {
+                                height: 3rem;
+                                margin-bottom: 1.25rem;
+                            }
+                            p {
+                                font-size: 2rem;
+                                line-height: 2.8rem;
+                            }
+                        }
+                        
+                    }
+                    .button-right {
+                        height: 18rem;
+                        width: 18rem;
+    
+                        button {
+                            img {
+                                height: 3rem;
+                                margin-bottom: 1.25rem;
+                            }
+                            p {
+                                font-size: 2rem;
+                                line-height: 2.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        footer { 
+            padding: 0 4rem 4rem 4rem;
+    
+            .vangogh a, .links a {
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+
+                img {
+                    height: .9rem;
+                }
+            }
+    
+            .links a:last-of-type img {
+                height: 2.6rem;
+            }
+            
+        }
+    }
+
+    body {
+        #buttons-guide {
+            .button-left {
+                height: 18rem;
+                width: 18rem;
+    
+                button {
+                    img {
+                        height: 3rem;
+                        margin-bottom: 1.25rem;
+                    }
+                    p {
+                        font-size: 2rem;
+                        line-height: 2.8rem;
+                    }
+                }
+                        
+            }
+            .button-right {
+                height: 18rem;
+                width: 18rem;
+    
+                button {
+                    img {
+                        height: 3rem;
+                        margin-bottom: 1.25rem;
+                    }
+                    p {
+                        font-size: 2rem;
+                        line-height: 2.8rem;
+                    }
+                }
+            }            
+        }
+    }
+}
+
+@media (max-width: 890px) {
+    body {
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .container-description {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 0 20vw 0 20vw;
+    
+                .datas {
+                    margin-bottom: 4rem;
+                    margin-left: 0;
+    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+                    .props {
+    
+                        label {
+                            font-size: 1.3rem;
+                            line-height: 1.6rem;
+    
+                        }
+                        label:not(:first-of-type) {
+                            margin-top: .6rem;
+                        }
+                    }
+    
+                    .values {
+                        margin-left: 2rem;
+    
+                        p {
+                            font-size: 1.3rem;
+                            line-height: 1.6rem;
+    
+                            width: 19.2rem;
+                        }
+                    }
+                }
+    
+                .description {
+                    display: flex;
+
+                    padding: 0;
+    
+                    width: 100%;
+    
+                    p {
+                        font-size: 1.4rem;
+                        line-height: 2rem;
+                    }
+                }
+
+                
+            }
+        }
+
+        footer { 
+            padding: 0 3rem 3rem 3rem;
+    
+            .vangogh a, .links a {
+                font-size: 1rem;
+                line-height: 1.2rem;
+
+                img {
+                    height: .9rem;
+                }
+            }
+    
+            .links a:last-of-type img {
+                height: 2.4rem;
+            }
+            
+        }
+    }
+}
+
+@media (max-width: 810px) {
+    body {
+        .hero {
+            .little-title {
+                p {
+                    font-size: 1rem;
+                }
+            }
+            .title {
+                h1 {
+                    font-size: 4.2rem;
+                    line-height: 5.6rem;
+                }
+            }
+        }
+
+        .main {
+
+            .container-description {
+                display: flex;
+                flex-direction: column;
+    
+                .datas {
+                    margin-bottom: 4rem;
+                    margin-left: 0;
+    
+                    display: flex;
+                    align-items: flex-start;
+    
+                    .props {
+    
+                        label {
+                            font-size: 1.3rem;
+                            line-height: 1.6rem;
+    
+                        }
+                        label:not(:first-of-type) {
+                            margin-top: .6rem;
+                        }
+                    }
+    
+                    .values {
+                        margin-left: 2rem;
+    
+                        p {
+                            font-size: 1.3rem;
+                            line-height: 1.6rem;
+    
+                            width: 19.2rem;
+                        }
+                    }
+                }
+    
+                .description {
+                    display: flex;
+    
+                    width: 100%;
+    
+                    p {
+                        font-size: 1.4rem;
+                        line-height: 2rem;
+                    }
+                }
+            }
+
+            .content {
+                .container-content {
+                    .first-image {
+                        img {
+                            max-width: 45rem;
+                        }
+                    }
+        
+                    .second-image {
+        
+                        img {
+                            height: 18rem;
+                            width: 18rem;
+                        }
+                    }
+        
+                    .third-image {
+                        margin-top: -9rem;
+
+                        width: 20rem;
+        
+                        img {
+                            height: 30rem;
+                            width: 20rem;
+        
+                            border-radius: 2rem;
+        
+                            object-fit: cover;
+                        }
+                    }
+
+                    .first-text {
+                        margin-top: 6rem;
+                        margin-left: -6rem;
+        
+                        width: 27.5rem;
+                        
+                        p {
+                            font-size: 1.6rem;
+                            line-height: 2.4rem;
+                        }
+                    }
+        
+                    .fourth-image {
+                        margin-top: 7rem;
+                        
+                        img {
+                            height: 45rem;
+                            width: 45rem;
+                        }
+                    }
+        
+                    .second-text {
+                        margin-top: 6rem;
+                        margin-bottom: 6rem;
+                        margin-right: -7rem;
+                        
+                        p {
+                            font-size: 1.6rem;
+                            line-height: 2.4rem;
+                        }
+                    }
+
+                    .fifth-image {
+        
+                        img {
+                            height: 45rem;
+                            width: 45rem;
+                        }
+                    }
+                }
+            
+                .container-buttons {
+                    .button-left {
+                        height: 16rem;
+                        width: 16rem;
+    
+                        button {
+                            img {
+                                height: 2rem;
+                                margin-bottom: 1rem;
+                            }
+                            p {
+                                font-size: 1.8rem;
+                                line-height: 2.6rem;
+                            }
+                        }
+                        
+                    }
+                    .button-right {
+                        height: 16rem;
+                        width: 16rem;
+    
+                        button {
+                            img {
+                                height: 2rem;
+                                margin-bottom: 1rem;
+                            }
+                            p {
+                                font-size: 1.8rem;
+                                line-height: 2.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        footer { 
+            padding: 0 3rem 3rem 3rem;
+    
+            .vangogh a, .links a {
+                font-size: 1rem;
+                line-height: 1.2rem;
+
+                img {
+                    height: .8rem;
+                }
+            }
+    
+            .links a:last-of-type img {
+                height: 2.4rem;
+            }
+            
+        }
+    }
+    
+    body {
+        #buttons-guide {
+            .button-left {
+                height: 16rem;
+                width: 16rem;
+
+                button {
+                    img {
+                        height: 2rem;
+                        margin-bottom: 1rem;
+                    }
+                    p {
+                        font-size: 1.4rem;
+                        line-height: 2.4rem;
+                    }
+                }
+                
+            }
+            .button-right {
+                height: 16rem;
+                width: 16rem;
+
+                button {
+                    img {
+                        height: 2rem;
+                        margin-bottom: 1rem;
+                    }
+                    p {
+                        font-size: 1.4rem;
+                        line-height: 2.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        .hero  {
+            .little-title {
+                p {
+                    font-size: .9rem;
+                }
+            }
+            .title {
+                h1 {
+                    font-size: 3.4rem;
+                    line-height: 4.8rem;
+                }            
+            }
+        }
+
+        .main {
+            .content {
+                .container-content {
+                    .first-image {
+                        img {
+                            max-width: 40rem;
+                        }
+                    }
+        
+                    .second-image {
+        
+                        img {
+                            height: 16rem;
+                            width: 16rem;
+                        }
+                    }
+        
+                    .third-image {
+                        margin-top: -8rem;
+
+                        width: 20rem;
+        
+                        img {
+                            height: 25rem;
+                            width: 20rem;
+                        }
+                    }
+
+                    .first-text {
+                        margin-top: 5rem;
+                        margin-left: -5rem;
+        
+                        width: 25rem;
+                        
+                        p {
+                            font-size: 1.4rem;
+                            line-height: 2.2rem;
+                        }
+                    }
+        
+                    .fourth-image {
+                        margin-top: 6rem;
+                        
+                        img {
+                            height: 40rem;
+                            width: 40rem;
+                        }
+                    }
+        
+                    .second-text {
+                        margin-top: 6rem;
+                        margin-bottom: 6rem;
+                        margin-right: -7rem;
+                        
+                        p {
+                            font-size: 1.6rem;
+                            line-height: 2.4rem;
+                        }
+                    }
+
+                    .fifth-image {
+        
+                        img {
+                            height: 40rem;
+                            width: 40rem;
+                        }
+                    }
+                }
+            
+                .container-buttons {
+                    .button-left {
+                        height: 14rem;
+                        width: 14rem;
+    
+                        button {
+                            img {
+                                height: 1.6rem;
+                                margin-bottom: .8rem;
+                            }
+                            p {
+                                font-size: 1.6rem;
+                                line-height: 2.4rem;
+                            }
+                        }
+                        
+                    }
+                    .button-right {
+                        height: 14rem;
+                        width: 14rem;
+    
+                        button {
+                            img {
+                                height: 1.6rem;
+                                margin-bottom: .8rem;
+                            }
+                            p {
+                                font-size: 1.6rem;
+                                line-height: 2.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        footer { 
+            padding: 0 2rem 2rem 2rem;
+    
+            .vangogh a, .links a {
+                font-size: 1rem;
+                line-height: 1.2rem;
+
+                img {
+                    height: .8rem;
+                }
+            }
+    
+            .links a:last-of-type img {
+                height: 2.4rem;
+            }
+            
+        }
+    }
+
+    body {
+        #buttons-guide {
+            .button-left {
+                height: 14rem;
+                width: 14rem;
+
+                button {
+                    img {
+                        height: 2rem;
+                        margin-bottom: 1rem;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                        line-height: 2.2rem;
+                    }
+                }
+            }
+            .button-right {
+                height: 14rem;
+                width: 14rem;
+
+                button {
+                    img {
+                        height: 2rem;
+                        margin-bottom: 1rem;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                        line-height: 2.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        .hero  {
+            #container-image {
+                height: 100vh;
+                width: 100vw;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .header {
+                .home {
+                    #first-image {
+                        display: none;
+                    }
+                    #second-image {
+                        display: block;
+                    }
+                    p {
+                        color: $white;
+                    }
+                }
+                
+                .right {
+                    .mode {
+                        display: none;
+                    }
+                    .menu {
+
+                        p {
+                            background-color: $white;
+                        }
+                    } 
+                }
+            }
+            .little-title {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40vh;
+
+                p {
+                    color: $white;
+
+                    display: initial;
+                    float: none;
+                    transform: none;
+
+                    margin: 0;
+                }
+            }
+            .title {
+                h1 {
+                    color: $white;
+                }            
+            }
+        }
+
+        .main {
+            .content {
+                .container-content {
+                    .first-image {
+                        img {
+                            max-width: 35rem;
+                        }
+                    }
+        
+                    .second-image {
+        
+                        img {
+                            height: 14rem;
+                            width: 14rem;
+                        }
+                    }
+        
+                    .third-image {
+                        margin-top: -7rem;
+
+                        width: 15rem;
+        
+                        img {
+                            height: 20rem;
+                            width: 15rem;
+                        }
+                    }
+
+                    .first-text {
+                        margin-top: 4rem;
+                        margin-left: -3rem;
+        
+                        width: 20rem;
+                        
+                        p {
+                            font-size: 1.2rem;
+                            line-height: 2rem;
+                        }
+                    }
+        
+                    .fourth-image {
+                        margin-top: 4rem;
+                        
+                        img {
+                            height: 35rem;
+                            width: 35rem;
+                        }
+                    }
+        
+                    .second-text {
+                        margin-top: 4rem;
+                        margin-bottom: 4rem;
+                        margin-right: -5rem;
+                        
+                        p {
+                            font-size: 1.2rem;
+                            line-height: 2rem;
+                        }
+                    }
+
+                    .fifth-image {
+        
+                        img {
+                            height: 35rem;
+                            width: 35rem;
+                        }
+                    }
+                }
+            
+                .container-buttons {
+                    height: 50vh;
+
+                    .button-left {
+                        height: 12rem;
+                        width: 12rem;
+    
+                        button {
+                            img {
+                                height: 1.6rem;
+                                margin-bottom: .8rem;
+                            }
+                            p {
+                                font-size: 1.4rem;
+                                line-height: 2.2rem;
+                            }
+                        }
+                        
+                    }
+                    .button-right {
+                        height: 12rem;
+                        width: 12rem;
+    
+                        button {
+                            img {
+                                height: 1.6rem;
+                                margin-bottom: .8rem;
+                            }
+                            p {
+                                font-size: 1.4rem;
+                                line-height: 2.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        footer { 
+            padding: 0 2rem 2rem 2rem;
+    
+            .vangogh a, .links a {
+                font-size: .8rem;
+                line-height: 1rem;
+
+                img {
+                    height: .7rem;
+                }
+            }
+    
+            .links a:last-of-type img {
+                height: 2.2rem;
+            }
+            
+        }
+    }
+
+    body {
+        #buttons-guide {
+            .button-left {
+                height: 12rem;
+                width: 12rem;
+
+                button {
+                    img {
+                        height: 2rem;
+                        margin-bottom: 1rem;
+                    }
+                    p {
+                        font-size: 1rem;
+                        line-height: 2rem;
+                    }
+                }
+            }
+            .button-right {
+                height: 12rem;
+                width: 12rem;
+
+                button {
+                    img {
+                        height: 2rem;
+                        margin-bottom: 1rem;
+                    }
+                    p {
+                        font-size: 1rem;
+                        line-height: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 510px) {
+    body {
+        .hero  {
+            #container-image {
+                height: 100vh;
+                width: 100vw;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .header {
+                .home {
+                    #first-image {
+                        display: none;
+                    }
+                    #second-image {
+                        display: block;
+                    }
+                    p {
+                        color: $white;
+                    }
+                }
+                
+                .right {
+                    .mode {
+                        display: none;
+                    }
+                    .menu {
+
+                        p {
+                            background-color: $white;
+                        }
+                    } 
+                }
+            }
+            .little-title {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40vh;
+
+                p {
+                    color: $white;
+
+                    display: initial;
+                    float: none;
+                    transform: none;
+
+                    margin: 0;
+                }
+            }
+            .title {
+                h1 {
+                    font-size: 3rem;
+                    line-height: 4.4rem;
+                    color: $white;
+                }            
+            }
+        }
+
+        .main {
+            .content {
+                .container-content {
+                    .first-image {
+                        img {
+                            max-width: 30rem;
+                        }
+                    }
+        
+                    .second-image {
+        
+                        img {
+                            height: 12rem;
+                            width: 12rem;
+                        }
+                    }
+        
+                    .third-image {
+                        margin-top: -6rem;
+
+                        width: 15rem;
+        
+                        img {
+                            height: 20rem;
+                            width: 15rem;
+                        }
+                    }
+
+                    .first-text {
+                        margin-top: 3rem;
+                        margin-left: -2rem;
+                        
+                        p {
+                            font-size: 1rem;
+                            line-height: 1.6rem;
+                        }
+                    }
+        
+                    .fourth-image {
+                        margin-top: 3rem;
+                        
+                        img {
+                            height: 30rem;
+                            width: 30rem;
+                        }
+                    }
+        
+                    .second-text {
+                        margin-top: 3rem;
+                        margin-bottom: 3rem;
+                        margin-right: -3.5rem;
+                        
+                        p {
+                            font-size: 1rem;
+                            line-height: 1.6rem;
+                        }
+                    }
+
+                    .fifth-image {
+        
+                        img {
+                            height: 30rem;
+                            width: 30rem;
+                        }
+                    }
+                }
+            
+                .container-buttons {
+                    height: 50vh;
+
+                    .button-left {
+                        height: 10rem;
+                        width: 10rem;
+    
+                        button {
+                            img {
+                                height: 1.4rem;
+                                margin-bottom: .6rem;
+                            }
+                            p {
+                                font-size: 1.2rem;
+                                line-height: 2rem;
+                            }
+                        }
+                    }
+                    .button-right {
+                        height: 10rem;
+                        width: 10rem;
+    
+                        button {
+                            img {
+                                height: 1.4rem;
+                                margin-bottom: .6rem;
+                            }
+                            p {
+                                font-size: 1.2rem;
+                                line-height: 2rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        footer { 
+            padding: 0 2rem 2rem 2rem;
+    
+            .vangogh a, .links a {
+                font-size: .6rem;
+                line-height: .8rem;
+
+                img {
+                    height: .6rem;
+                }
+            }
+    
+            .links a:last-of-type img {
+                height: 2rem;
+            }
+            
+        }
+    }
+}
