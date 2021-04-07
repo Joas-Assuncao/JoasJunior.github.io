@@ -11,22 +11,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="hero" id="hero">       
+    <section class="hero" id="hero">
         <header class="header">
-            <button class="home">
+            <a href="guide.html" class="home">
                 <img id="first-image" src="/images/left-arrow-black.svg" alt="arrow-left">
                 <img id="second-image" src="/images/left-arrow-white.svg" alt="arrow-left">
                 <p>Home</p>
-            </button>
+            </a>
             <div class="right">
                 <button class="mode">
                     <img src="/images/dark-light.svg" alt="dark-light">
                 </button>
-                <button class="menu">
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                </button>
+                <div class="menu-section">
+                    <div class="menu-toggle">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="guide.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">About us</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
         <div id="container-image">
@@ -162,5 +177,7 @@
             </a>
         </div>
     </footer>
+    
+    <script src="/scripts/scripts.js"></script>
 </body>
 </html>

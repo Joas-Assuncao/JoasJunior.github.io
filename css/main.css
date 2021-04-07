@@ -11,9 +11,11 @@ Obrigado desde já!
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 
-.display, body .hero .header .home, body .hero .header .right {
+.display, body .hero .header .home {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,7 +27,7 @@ Obrigado desde já!
           justify-content: center;
 }
 
-.button, body .main .content .container-buttons .button-left button, body .main .content .container-buttons .button-right button, #buttons-guide .button-left button, #buttons-guide .button-right button {
+.button, body .main .content .container-buttons .button-left button, body .main .content .container-buttons .button-right button {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -79,6 +81,7 @@ body .hero .header {
   padding: 3.2rem;
   width: 100vw;
   position: absolute;
+  z-index: 20;
 }
 
 body .hero .header button {
@@ -88,9 +91,15 @@ body .hero .header button {
   cursor: pointer;
 }
 
+body .hero .header .home {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
 body .hero .header .home p {
   font-size: 1.4rem;
   text-align: center;
+  color: #000;
 }
 
 body .hero .header .home img {
@@ -102,23 +111,128 @@ body .hero .header .home #second-image {
   display: none;
 }
 
+body .hero .header .home:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+body .hero .header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 body .hero .header .right .mode {
   margin-right: 1.6rem;
-  margin-top: .3rem;
 }
 
 body .hero .header .right .mode img {
-  width: 1.6rem;
-}
-
-body .hero .header .right .menu p {
-  height: .1rem;
   width: 2rem;
-  background: #000;
 }
 
-body .hero .header .right .menu p:not(:last-of-type) {
-  margin-bottom: .64rem;
+body .hero .header .right nav {
+  display: none;
+}
+
+body .hero .header .right .menu-section {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+body .hero .header .right .menu-section .menu-toggle {
+  height: 30px;
+  width: 25px;
+  margin-top: .3rem;
+  margin-right: 20px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+body .hero .header .right .menu-section .menu-toggle .one, body .hero .header .right .menu-section .menu-toggle .two, body .hero .header .right .menu-section .menu-toggle .three {
+  background-color: #000;
+  height: 2px;
+  width: 100%;
+  margin: 6px auto;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+body .hero .header .right .menu-section .menu-toggle:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+body .hero .header .right .menu-section.on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: url("/images/The_Night.jpg") no-repeat center;
+  z-index: 10;
+}
+
+body .hero .header .right .menu-section.on nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+body .hero .header .right .menu-section.on nav ul {
+  display: block;
+  text-align: center;
+}
+
+body .hero .header .right .menu-section.on nav ul li {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+body .hero .header .right .menu-section.on nav ul li:hover {
+  opacity: 30%;
+}
+
+body .hero .header .right .menu-section.on nav ul li:not(:last-of-type) {
+  margin-bottom: 30%;
+}
+
+body .hero .header .right .menu-section.on nav ul a {
+  color: #FFF;
+  font-size: 3.2rem;
+  line-height: 4.4rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+  display: block;
+}
+
+body .hero .header .right .menu-section.on .menu-toggle {
+  position: absolute;
+  right: 3%;
+  top: 5%;
+}
+
+body .hero .header .right .menu-section.on .menu-toggle .one {
+  -webkit-transform: rotate(45deg) translate(7px, 7px);
+          transform: rotate(45deg) translate(7px, 7px);
+}
+
+body .hero .header .right .menu-section.on .menu-toggle .two {
+  opacity: 0;
+}
+
+body .hero .header .right .menu-section.on .menu-toggle .three {
+  -webkit-transform: rotate(-45deg) translate(4px, -4px);
+          transform: rotate(-45deg) translate(4px, -4px);
 }
 
 body .hero .little-title {
@@ -496,20 +610,34 @@ body footer .links a:last-of-type img {
   width: 25rem;
   border-radius: 50%;
   background: #000;
+  -webkit-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
 }
 
-#buttons-guide .button-left button {
-  background: transparent;
-  border: none;
-  outline: none;
+#buttons-guide .button-left a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
 }
 
-#buttons-guide .button-left button img {
+#buttons-guide .button-left a img {
   height: 3rem;
   margin-bottom: 1.5rem;
 }
 
-#buttons-guide .button-left button p {
+#buttons-guide .button-left a p {
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
@@ -531,20 +659,34 @@ body footer .links a:last-of-type img {
   border-radius: 50%;
   background: url("/images/The_Night.jpg");
   background-size: cover;
+  -webkit-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
 }
 
-#buttons-guide .button-right button {
-  background: transparent;
-  border: none;
-  outline: none;
+#buttons-guide .button-right a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
 }
 
-#buttons-guide .button-right button img {
+#buttons-guide .button-right a img {
   margin-bottom: 1.5rem;
   height: 3rem;
 }
 
-#buttons-guide .button-right button p {
+#buttons-guide .button-right a p {
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
@@ -552,7 +694,7 @@ body footer .links a:last-of-type img {
 }
 
 #buttons-guide .button-left:hover, #buttons-guide .button-right:hover {
-  opacity: 95%;
+  opacity: 90%;
 }
 
 /* MEDIAS QUERIES */
@@ -690,11 +832,11 @@ body footer .links a:last-of-type img {
     height: 20rem;
     width: 20rem;
   }
-  body #buttons-guide .button-left button img {
+  body #buttons-guide .button-left a img {
     height: 3rem;
     margin-bottom: 1.25rem;
   }
-  body #buttons-guide .button-left button p {
+  body #buttons-guide .button-left a p {
     font-size: 2rem;
     line-height: 2.8rem;
   }
@@ -702,11 +844,11 @@ body footer .links a:last-of-type img {
     height: 20rem;
     width: 20rem;
   }
-  body #buttons-guide .button-right button img {
+  body #buttons-guide .button-right a img {
     height: 3rem;
     margin-bottom: 1.25rem;
   }
-  body #buttons-guide .button-right button p {
+  body #buttons-guide .button-right a p {
     font-size: 2rem;
     line-height: 2.8rem;
   }
@@ -829,11 +971,11 @@ body footer .links a:last-of-type img {
     height: 18rem;
     width: 18rem;
   }
-  body #buttons-guide .button-left button img {
+  body #buttons-guide .button-left a img {
     height: 3rem;
     margin-bottom: 1.25rem;
   }
-  body #buttons-guide .button-left button p {
+  body #buttons-guide .button-left a p {
     font-size: 2rem;
     line-height: 2.8rem;
   }
@@ -841,11 +983,11 @@ body footer .links a:last-of-type img {
     height: 18rem;
     width: 18rem;
   }
-  body #buttons-guide .button-right button img {
+  body #buttons-guide .button-right a img {
     height: 3rem;
     margin-bottom: 1.25rem;
   }
-  body #buttons-guide .button-right button p {
+  body #buttons-guide .button-right a p {
     font-size: 2rem;
     line-height: 2.8rem;
   }
@@ -1074,11 +1216,11 @@ body footer .links a:last-of-type img {
     height: 16rem;
     width: 16rem;
   }
-  body #buttons-guide .button-left button img {
+  body #buttons-guide .button-left a img {
     height: 2rem;
     margin-bottom: 1rem;
   }
-  body #buttons-guide .button-left button p {
+  body #buttons-guide .button-left a p {
     font-size: 1.4rem;
     line-height: 2.4rem;
   }
@@ -1086,11 +1228,11 @@ body footer .links a:last-of-type img {
     height: 16rem;
     width: 16rem;
   }
-  body #buttons-guide .button-right button img {
+  body #buttons-guide .button-right a img {
     height: 2rem;
     margin-bottom: 1rem;
   }
-  body #buttons-guide .button-right button p {
+  body #buttons-guide .button-right a p {
     font-size: 1.4rem;
     line-height: 2.4rem;
   }
@@ -1189,11 +1331,11 @@ body footer .links a:last-of-type img {
     height: 14rem;
     width: 14rem;
   }
-  body #buttons-guide .button-left button img {
+  body #buttons-guide .button-left a img {
     height: 2rem;
     margin-bottom: 1rem;
   }
-  body #buttons-guide .button-left button p {
+  body #buttons-guide .button-left a p {
     font-size: 1.2rem;
     line-height: 2.2rem;
   }
@@ -1201,11 +1343,11 @@ body footer .links a:last-of-type img {
     height: 14rem;
     width: 14rem;
   }
-  body #buttons-guide .button-right button img {
+  body #buttons-guide .button-right a img {
     height: 2rem;
     margin-bottom: 1rem;
   }
-  body #buttons-guide .button-right button p {
+  body #buttons-guide .button-right a p {
     font-size: 1.2rem;
     line-height: 2.2rem;
   }
@@ -1232,8 +1374,8 @@ body footer .links a:last-of-type img {
   body .hero .header .right .mode {
     display: none;
   }
-  body .hero .header .right .menu p {
-    background-color: #FFF;
+  body .hero .header .right .menu-section .menu-toggle .one, body .hero .header .right .menu-section .menu-toggle .two, body .hero .header .right .menu-section .menu-toggle .three {
+    background: #FFF;
   }
   body .hero .little-title {
     display: -webkit-box;
@@ -1346,11 +1488,11 @@ body footer .links a:last-of-type img {
     height: 12rem;
     width: 12rem;
   }
-  body #buttons-guide .button-left button img {
+  body #buttons-guide .button-left a img {
     height: 2rem;
     margin-bottom: 1rem;
   }
-  body #buttons-guide .button-left button p {
+  body #buttons-guide .button-left a p {
     font-size: 1rem;
     line-height: 2rem;
   }
@@ -1358,11 +1500,11 @@ body footer .links a:last-of-type img {
     height: 12rem;
     width: 12rem;
   }
-  body #buttons-guide .button-right button img {
+  body #buttons-guide .button-right a img {
     height: 2rem;
     margin-bottom: 1rem;
   }
-  body #buttons-guide .button-right button p {
+  body #buttons-guide .button-right a p {
     font-size: 1rem;
     line-height: 2rem;
   }
@@ -1389,8 +1531,8 @@ body footer .links a:last-of-type img {
   body .hero .header .right .mode {
     display: none;
   }
-  body .hero .header .right .menu p {
-    background-color: #FFF;
+  body .hero .header .right .menu-section .menu-toggle {
+    margin-right: 5%;
   }
   body .hero .little-title {
     display: -webkit-box;
@@ -1472,8 +1614,8 @@ body footer .links a:last-of-type img {
     margin-bottom: .6rem;
   }
   body .main .content .container-buttons .button-left button p {
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.8rem;
   }
   body .main .content .container-buttons .button-right {
     height: 10rem;
@@ -1484,8 +1626,8 @@ body footer .links a:last-of-type img {
     margin-bottom: .6rem;
   }
   body .main .content .container-buttons .button-right button p {
-    font-size: 1.2rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.8rem;
   }
   body footer {
     padding: 0 2rem 2rem 2rem;
