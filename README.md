@@ -12,4 +12,6 @@ Gostei muito do teste e me agregou demais!!
 
 ## Link aplicação (hospedado no Github Pages):
 
+(veja em inglês)
+
 https://joasjunior.github.io/index
