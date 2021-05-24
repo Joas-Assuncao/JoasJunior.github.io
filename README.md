@@ -10,5 +10,6 @@ Os erros foram:
 
 Gostei muito do teste e me agregou demais!!
 
-## Link aplicação (hospedado no Netlify):
+## Link aplicação (hospedado no Github Pages):
 
+https://joasjunior.github.io/index
